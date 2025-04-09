@@ -6,7 +6,6 @@ public class CustomerServiceImplementation implements CustomerService {
 
     private Map<String, Customer> customerMap = new HashMap<>();
 
-
     @Override
     public void addCustomer(Customer customer) {
         customerMap.put(customer.getCustomerId(), customer);

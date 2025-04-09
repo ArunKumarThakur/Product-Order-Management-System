@@ -16,8 +16,10 @@ public class MainApp {
         // Add products
         Product p1 = new Product("Laptop", 55000);
         Product p2 = new Product("Phone", 20000);
+        Product p3 = new Product("Power Bank", 1999);
         productServices.addProduct(p1);
         productServices.addProduct(p2);
+        productServices.addProduct(p3);
 
         // Add customer
         Customer c1 = new Customer("C101", "Arun", "arun@example.com");
@@ -31,12 +33,12 @@ public class MainApp {
 
         // Create and place order
         Order order = new Order();
-        order.setProductList(Arrays.asList(p1, p2));
+        order.setProductList(Arrays.asList(p1, p2, p3));
         orderServices.placeOrder(order);
 
         // View order
         orderServices.viewOrder(order);
 
-        ((ClassPathXmlApplicationContext) context).close();
+        //((ClassPathXmlApplicationContext) context).close();
     }
 }
